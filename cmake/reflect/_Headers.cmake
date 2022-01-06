@@ -52,5 +52,6 @@ src/import.h
 #
 set( PUBLIC_HEADERS
 src/MulleScionHTMLPreprocessor.h
+src/reflect/_MulleScionHTMLPreprocessor-versioncheck.h
 )
 

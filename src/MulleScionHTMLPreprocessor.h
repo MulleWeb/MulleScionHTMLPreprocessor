@@ -9,7 +9,7 @@
 #import "import.h"
 
 
-#define MULLE_SCION_HTML_PREPROCESSOR_VERSION  ((0 << 20) | (2 << 8) | 3)
+#define MULLE_SCION_HTML_PREPROCESSOR_VERSION  ((0 << 20) | (2 << 8) | 4)
 
 
 @interface MulleScionHTMLPreprocessor : NSObject
@@ -17,3 +17,9 @@
 - (NSData *) preprocessedData:(NSData *) data;
 
 @end
+
+#ifdef __has_include
+# if __has_include( "_MulleScionHTMLPreprocessor-versioncheck.h")
+#  include "_MulleScionHTMLPreprocessor-versioncheck.h"
+# endif
+#endif
