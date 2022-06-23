@@ -1,7 +1,6 @@
-cmake_minimum_required( VERSION 3.1)
+cmake_minimum_required( VERSION 3.15)
 
 project( MulleScionHTMLPreprocessor C)
-add_definitions( -DMULLE_SCION_HTML_PREPROCESSOR_EXTERN_GLOBAL=extern)
 
 
 
