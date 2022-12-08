@@ -36,7 +36,7 @@ The other tags are more useful in the `<body>` section.
 
 ## Example
 
- ```
+``` html
  <html>
   <head>
     <objc>
@@ -58,7 +58,7 @@ The other tags are more useful in the `<body>` section.
 Unknown tags shouldn't get rendered by the browser. Therefore there is nothing to do for
 most tags. The text between `<objc>` and `</objc>` can be hidden with CSS:
 
-```
+``` html
 <style type="text/css">
  objc { display: none; white-space: pre; }
 </style>
@@ -85,7 +85,7 @@ MulleScionParser *parser;
 
 Use [mulle-sde](//github.com/mulle-sde) to add MulleScionHTMLPreprocessor to your project:
 
-```
+``` sh
 mulle-sde dependency add --objc --github MulleWeb MulleScionHTMLPreprocessor
 ```
 
@@ -94,7 +94,7 @@ mulle-sde dependency add --objc --github MulleWeb MulleScionHTMLPreprocessor
 Use [mulle-sde](//github.com/mulle-sde) to build and install MulleScionHTMLPreprocessor and
 all its dependencies:
 
-```
+``` sh
 mulle-sde install --objc --prefix /usr/local \
    https://github.com/MulleWeb/MulleScionHTMLPreprocessor/archive/latest.tar.gz
 ```
