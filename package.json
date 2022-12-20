@@ -8,7 +8,7 @@
    "license" : "UNLICENSED",
    "repository" : {
       "type" : "git",
-      "url" : "MulleWeb/MulleScionHTMLPreprocessor"
+      "url" : "github:MulleWeb/MulleScionHTMLPreprocessor"
    },
    "dependencies" : {
       "MulleObjCValueFoundation" : "git://github.com/MulleFoundation/MulleObjCValueFoundation",
