@@ -1,0 +1,19 @@
+## Example
+
+``` html
+ <html>
+  <head>
+    <objc>
+       x = @"Hello World";
+    </objc>
+  </head>
+  <body>
+    <if x>
+       <h1>{{ x }}</h1>
+    <else/>
+       <h1>I have nothing to say</h1>
+    </if>
+  </body>
+</html>
+```
+
