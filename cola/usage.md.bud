@@ -1,0 +1,12 @@
+## Usage
+
+> Preprocessor support is available starting with MulleScion version 1859.
+
+```
+MulleScionParser *parser;
+
+...
+[parser setPreprocessor:[MulleScionHTMLPreprocessor object]];
+```
+
+

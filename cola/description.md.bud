@@ -1,0 +1,5 @@
+Write your [MulleScion](//github.com/MulleWeb/MulleScion) template code in HTML
+lookalike tags. Now reformat the HTML document and it doesn't destroy your
+template code (as much).
+
+> Check the [Wiki](//github.com/MulleWeb/MulleScionHTMLPreprocessor/wiki) for editor setup help.
