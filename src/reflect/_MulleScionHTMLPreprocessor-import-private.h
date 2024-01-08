@@ -11,9 +11,3 @@
  *
  */
 /* no headers */
-
-#ifdef __has_include
-# if __has_include( "_MulleScionHTMLPreprocessor-include-private.h")
-#  include "_MulleScionHTMLPreprocessor-include-private.h"
-# endif
-#endif
