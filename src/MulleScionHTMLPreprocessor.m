@@ -104,7 +104,7 @@ static int   preprocess( struct mulle__buffer*in, struct mulle_buffer *out)
       case expect_open :
          if( c != '<')
          {
-            if( _mulle__buffer_find_byte( in, '<') == -1)
+            if( _mulle__buffer_seek_byte( in, '<') == -1)
                goto done;
 
             c = _mulle__buffer_next_byte( in);
@@ -282,7 +282,7 @@ static int   preprocess( struct mulle__buffer*in, struct mulle_buffer *out)
          5. add %}
          Special handling for <objc> and </objc>
       */
-      mulle_buffer_add_buffer_range( out, in, file_start, tag_start - file_start);
+      mulle_buffer_add_buffer_range( out, in, mulle_range_make( file_start, tag_start - file_start));
       if( identifier_first_char == 'o')
          mulle_buffer_add_string( out, backslash ? "%} " : "{% ");
       else
@@ -292,10 +292,10 @@ static int   preprocess( struct mulle__buffer*in, struct mulle_buffer *out)
          {
             if( backslash & 1)
                mulle_buffer_add_string( out, "end");
-            mulle_buffer_add_buffer_range( out, in, identifier_start, identifier_end - identifier_start - 1);
+            mulle_buffer_add_buffer_range( out, in, mulle_range_make( identifier_start, identifier_end - identifier_start - 1));
          }
          else
-            mulle_buffer_add_buffer_range( out, in, identifier_start, content_end - identifier_start);
+            mulle_buffer_add_buffer_range( out, in, mulle_range_make( identifier_start, content_end - identifier_start));
          mulle_buffer_add_string( out, " %}");
       }
       file_start = tag_end;
@@ -312,7 +312,7 @@ done:
       return( 0);
 
    file_end = _mulle__buffer_get_seek( in);
-   mulle_buffer_add_buffer_range( out, in, file_start, file_end - file_start);
+   mulle_buffer_add_buffer_range( out, in, mulle_range_make( file_start, file_end - file_start));
    return( 1);
 }
 

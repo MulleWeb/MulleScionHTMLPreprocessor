@@ -1,0 +1,27 @@
+{
+   "name" : "MulleScionHTMLPreprocessor",
+   "version" : "0.2.8",
+   "description" : "🥣 A Preprocessor for HTML that converts `<objc>` and other tags to MulleScion `{%` `%}`",
+   "keywords" : [],
+   "license" : "BSD-3-Clause",
+   "repo" : "MulleWeb/MulleScionHTMLPreprocessor",
+   "src" : [
+      "src/generic/import-private.h",
+      "src/generic/import.h",
+      "src/MulleObjCLoader+MulleScionHTMLPreprocessor.m",
+      "src/MulleScionHTMLPreprocessor.h",
+      "src/MulleScionHTMLPreprocessor.m",
+      "src/reflect/objc-loader.inc",
+      "src/reflect/_MulleScionHTMLPreprocessor-export.h",
+      "src/reflect/_MulleScionHTMLPreprocessor-import-private.h",
+      "src/reflect/_MulleScionHTMLPreprocessor-import.h",
+      "src/reflect/_MulleScionHTMLPreprocessor-include-private.h",
+      "src/reflect/_MulleScionHTMLPreprocessor-include.h",
+      "src/reflect/_MulleScionHTMLPreprocessor-provide.h",
+      "src/reflect/_MulleScionHTMLPreprocessor-versioncheck.h"
+   ],
+   "dependencies" : {
+      "MulleFoundation/MulleFoundationBase": "*",
+      "mulle-objc/mulle-objc-list": "*"
+   }
+}
