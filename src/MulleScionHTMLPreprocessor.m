@@ -43,7 +43,7 @@ enum parser_state
 };
 
 
-static int   preprocess( struct mulle__buffer*in, struct mulle_buffer *out)
+static int   preprocess( struct mulle__buffer *in, struct mulle_buffer *out)
 {
    unsigned int        c;
    enum parser_state   state;
@@ -282,7 +282,9 @@ static int   preprocess( struct mulle__buffer*in, struct mulle_buffer *out)
          5. add %}
          Special handling for <objc> and </objc>
       */
-      mulle_buffer_add_buffer_range( out, in, mulle_range_make( file_start, tag_start - file_start));
+      mulle_buffer_add_buffer_range( out,
+                                     (struct mulle_buffer *) in,
+                                     mulle_range_make( file_start, tag_start - file_start));
       if( identifier_first_char == 'o')
          mulle_buffer_add_string( out, backslash ? "%} " : "{% ");
       else
@@ -292,10 +294,14 @@ static int   preprocess( struct mulle__buffer*in, struct mulle_buffer *out)
          {
             if( backslash & 1)
                mulle_buffer_add_string( out, "end");
-            mulle_buffer_add_buffer_range( out, in, mulle_range_make( identifier_start, identifier_end - identifier_start - 1));
+            mulle_buffer_add_buffer_range( out,
+                                           (struct mulle_buffer *) in,
+                                           mulle_range_make( identifier_start, identifier_end - identifier_start - 1));
          }
          else
-            mulle_buffer_add_buffer_range( out, in, mulle_range_make( identifier_start, content_end - identifier_start));
+            mulle_buffer_add_buffer_range( out,
+                                           (struct mulle_buffer *) in,
+                                           mulle_range_make( identifier_start, content_end - identifier_start));
          mulle_buffer_add_string( out, " %}");
       }
       file_start = tag_end;
@@ -312,26 +318,28 @@ done:
       return( 0);
 
    file_end = _mulle__buffer_get_seek( in);
-   mulle_buffer_add_buffer_range( out, in, mulle_range_make( file_start, file_end - file_start));
+   mulle_buffer_add_buffer_range( out,
+                                  (struct mulle_buffer *) in,
+                                  mulle_range_make( file_start, file_end - file_start));
    return( 1);
 }
 
 
 - (NSData *) preprocessedData:(NSData *) data
 {
-   struct mulle__buffer  in;
-   struct mulle_buffer   out;
+   struct mulle__buffer   in;
 
    _mulle__buffer_init_with_static_bytes( &in, (void *) [data bytes], [data length]);
-   mulle_buffer_init( &out, &mulle_default_allocator);
 
-   if( preprocess( &in, &out))
-      data = [NSData dataWithBytes:mulle_buffer_get_bytes( &out)
-                            length:mulle_buffer_get_length( &out)];
+   mulle_buffer_do( out)
+   {
+      if( preprocess( &in, out))
+         data = [NSData dataWithBytes:mulle_buffer_get_bytes( out)
+                               length:mulle_buffer_get_length( out)];
 
-   // not needed as its static
-   //    _mulle__buffer_done( &in, NULL);
-   mulle_buffer_done( &out);
+      // not needed as its static
+      //    _mulle__buffer_done( &in, NULL);
+   }
 
    return( data);
 }
