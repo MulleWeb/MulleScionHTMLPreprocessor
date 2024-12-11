@@ -11,7 +11,7 @@ template code (as much).
 
 | Release Version                                       | Release Notes
 |-------------------------------------------------------|--------------
-| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/MulleWeb/MulleScionHTMLPreprocessor.svg?branch=release) [![Build Status](https://github.com/MulleWeb/MulleScionHTMLPreprocessor/workflows/CI/badge.svg?branch=release)](//github.com/MulleWeb/MulleScionHTMLPreprocessor/actions) | [RELEASENOTES](RELEASENOTES.md) |
+| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/MulleWeb/MulleScionHTMLPreprocessor.svg) [![Build Status](https://github.com/MulleWeb/MulleScionHTMLPreprocessor/workflows/CI/badge.svg)](//github.com/MulleWeb/MulleScionHTMLPreprocessor/actions) | [RELEASENOTES](RELEASENOTES.md) |
 
 
 
