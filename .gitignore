@@ -38,3 +38,6 @@ coverage*.html
 *.gcno
 cola/wilted/
 MulleScionHTMLPreprocessor.sublime-workspace
+*-build-*/
+.idea/
+*.bak
