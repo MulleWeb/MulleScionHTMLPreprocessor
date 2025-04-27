@@ -9,9 +9,9 @@ template code (as much).
 > Check the [Wiki](//github.com/MulleWeb/MulleScionHTMLPreprocessor/wiki) for editor setup help.
 
 
-| Release Version                                       | Release Notes
-|-------------------------------------------------------|--------------
-| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/MulleWeb/MulleScionHTMLPreprocessor.svg) [![Build Status](https://github.com/MulleWeb/MulleScionHTMLPreprocessor/workflows/CI/badge.svg)](//github.com/MulleWeb/MulleScionHTMLPreprocessor/actions) | [RELEASENOTES](RELEASENOTES.md) |
+| Release Version                                       | Release Notes  | AI Documentation
+|-------------------------------------------------------|----------------|---------------
+| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/MulleWeb/MulleScionHTMLPreprocessor.svg) [![Build Status](https://github.com/MulleWeb/MulleScionHTMLPreprocessor/workflows/CI/badge.svg)](//github.com/MulleWeb/MulleScionHTMLPreprocessor/actions) | [RELEASENOTES](RELEASENOTES.md) | [DeepWiki for MulleScionHTMLPreprocessor](https://deepwiki.com/MulleWeb/MulleScionHTMLPreprocessor)
 
 
 
