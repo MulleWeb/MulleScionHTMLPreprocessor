@@ -1,3 +1,8 @@
+### 0.2.10
+
+
+* declare MulleScionHTMLPreprocessor as MulleObjCThreadSafe (for TAO) as it is
+
 ### 0.2.9
 
 Various small improvements
