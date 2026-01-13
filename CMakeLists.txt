@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.13...99.99)
 
-project( MulleScionHTMLPreprocessor VERSION 0.2.10 LANGUAGES C)
+project( MulleScionHTMLPreprocessor VERSION 0.2.11 LANGUAGES C)
 
 
 
