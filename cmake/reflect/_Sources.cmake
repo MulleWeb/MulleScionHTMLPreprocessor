@@ -18,5 +18,5 @@ src/MulleScionHTMLPreprocessor.m
 # contents selected with patternfile ??-source--stage2-sources
 #
 set( STAGE2_SOURCES
-src/MulleObjCLoader+MulleScionHTMLPreprocessor.m
+src/MulleObjCDeps+MulleScionHTMLPreprocessor.m
 )
