@@ -8,6 +8,7 @@
       repo="MulleScionHTMLPreprocessor";
       homepage="https://github.com/MulleWeb/MulleScionHTMLPreprocessor";
       license="BSD-3-Clause";
+      version="0.3.0";
    };
    dependencies =
    (
