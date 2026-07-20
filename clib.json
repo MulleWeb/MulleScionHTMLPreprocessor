@@ -1,6 +1,6 @@
 {
    "name" : "MulleScionHTMLPreprocessor",
-   "version" : "0.3.0",
+   "version" : "0.3.1",
    "description" : "🥣 A Preprocessor for HTML that converts `<objc>` and other tags to MulleScion `{%` `%}`",
    "keywords" : [],
    "license" : "BSD-3-Clause",
