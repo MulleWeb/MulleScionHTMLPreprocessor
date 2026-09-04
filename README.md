@@ -49,6 +49,11 @@ MulleScionParser *parser;
 
 
 
+
+## Documentation & Guides
+
+* [API Summary](asset/dox/api/toc)
+
 ## Info
 
 ### Hide the uglies in HTML preview
