@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.13...99.99)
 
-project( MulleScionHTMLPreprocessor VERSION 0.3.2 LANGUAGES C)
+project( MulleScionHTMLPreprocessor VERSION 0.3.3 LANGUAGES C)
 
 
 
@@ -36,8 +36,8 @@ include( Library)
 include( InstallLibrary)
 
 if( LINK_PHASE)
-   include( InstallCMakeInclude)
-   include( InstallCMakePackage)
+   include( AddSubdirectorySupport)
+   include( FindPackageSupport)
 endif() 
 
 include( FinalOutput OPTIONAL)

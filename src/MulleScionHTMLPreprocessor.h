@@ -35,7 +35,7 @@
 #import "import.h"
 
 
-#define MULLE_SCION_HTML_PREPROCESSOR_VERSION  ((0UL << 20) | (3 << 8) | 2)
+#define MULLE_SCION_HTML_PREPROCESSOR_VERSION  ((0UL << 20) | (3 << 8) | 3)
 
 
 @interface MulleScionHTMLPreprocessor : NSObject < MulleObjCThreadSafe>
