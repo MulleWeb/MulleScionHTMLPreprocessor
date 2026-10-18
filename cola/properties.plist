@@ -3,12 +3,13 @@
    {
       description="🥣 A Preprocessor for HTML that converts `<objc>` and other tags to MulleScion `{%` `%}`";
       domain="github";
+      language="c";
+      dialect="objc";
       name="MulleScionHTMLPreprocessor";
       user="MulleWeb";
       repo="MulleScionHTMLPreprocessor";
       homepage="https://github.com/MulleWeb/MulleScionHTMLPreprocessor";
       license="BSD-3-Clause";
-      version="0.3.3";
    };
    dependencies =
    (
@@ -23,9 +24,9 @@
       {
          description="📒 Lists mulle-objc runtime information contained in executables.";
          domain="github";
-         name="mulle-objc-list";
-         repo="mulle-objc-list";
-         url="https://github.com/mulle-objc/mulle-objc-list";
+         name="mulle-objc-tools";
+         repo="mulle-objc-tools";
+         url="https://github.com/mulle-objc/mulle-objc-tools";
          user="mulle-objc";
       }
    );
